@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+  <title>Document</title>
+
+</head>
+<body>
+<div class="containe w-100  d-flex  justify-content-evenly">
+  <div class="left w-25  fs-4 d-flex flex-column justify-content-evenly sticky-top" style="height: 620px;">
+    <h1 style="font-family: 'Lobster', cursive;">instagram</h1>
+    <a style="text-decoration: none; color: black;" href="/homepage/<%= user._id%>"><i class="ri-home-4-fill" style="margin: 0vmax 1vmax;"></i>Home</a>
+    <a style="text-decoration: none; color: black;" href=""><i class="ri-search-line" style="margin: 0vmax 1vmax;"></i>Search</a>
+    <a style="text-decoration: none; color: black;" href=""><i class="ri-scan-2-fill" style="margin: 0vmax 1vmax;"></i>Explore</a>
+    <a style="text-decoration: none; color: black;" href=""><i class="ri-vidicon-fill" style="margin: 0vmax 1vmax;"></i>Reels</a>
+    <a style="text-decoration: none; color: black;" href=""><i class="ri-message-2-fill" style="margin: 0vmax 1vmax;"></i>Messages</a>
+    <a style="text-decoration: none; color: black;" href=""><i class="ri-heart-line" style="margin: 0vmax 1vmax;"></i>Notifications</a>
+    <a style="text-decoration: none; color: black;" href=""><i class="ri-add-box-line" style="margin: 0vmax 1vmax;"></i>Create</a>
+    <a style="text-decoration: none; color: black;" href="/profile/:user._id"><i class="ri-user-3-fill" style="margin: 0vmax 1vmax;"></i>Profile</a>
+    <a style="text-decoration: none; color: black;" href=""><i class="ri-menu-line" style="margin: 0vmax 1vmax;"></i>More</a>
+</div>
+ <div class="middle bg-secondary sticky-top " style="width: 2px; height: 650px;"></div>
+ <form class=" w-50 mt-5 mb-5 d-flex flex-column justify-content-evenly align-items-center" action="/createupdate" method="post">
+  <h4><%=user.username%></h4>
+  
+  
+  <!-- <input class="w-25 mb-2" type="url" value="change profile photo" name="photo"> -->
+  <h5 class="w-50">Name <input class="" type="text" value="<%=user.name%>" name="name"></h5>
+
+
+ <p class="w-50">Help people discover your account by using the name <br> you're known by: either your full name, nickname, or business name.</p>
+
+ <p class="w-50">You can only change your name twice within 14 days.</p>
+ <h5 class="w-50">Username  <input class="" type="text" value="<%=user.username%>" name="username"></h5>
+
+ <h5 class="w-50">Website    <input class="" type="text" placeholder="Website"></h5>
+ <p class="w-50">Editing your links is only available on mobile. Visit <br>
+   the Instagram app and edit your profile to change the websites in your bio.</p>
+
+   <textarea class="w-50" name="" id="" cols="15" rows="5"></textarea>
+
+   <h2 class="w-50">Personal information</h2>
+   <p class="w-50">Provide your personal information, even if the account is used for a business, a pet or something else. This won't be  a part of your public profile.</p>
+   <h5 class="w-50">E-mail   <input class="w-75" type="text" value="<%=user.email%>" name="email"></h5>
+   <h5 class="w-50">Phone number<input class="w-50" type="text" placeholder="<%=user.number%>" name="number"></h5>
+   <h5 class="w-50">Gender<select class="w-75" name="gender">
+    <option value="">Prefer not to say</option>
+    <option value="">Male</option>
+    <option value="">Female</option>
+    <option value="">Custom</option>
+   
+    
+   </select></h5>
+   <p class="w-50"><input type="checkbox" >Choose whether people can see similar account suggestions on your profile, and whether your account can be suggested on other profiles.[?]</p>
+   
+ 
+ <button class="btn btn-success mt-5 p-2 fs-3 w-50">Submit</button>
+ <a  class="text-center fs-4 mt-2 w-50" href="">Teporary Deactivate My Account</a>
+</form>
+
+</div>
+
+
+  
+        
+       
+        
+  
+      
+         
+
+
+  
+</body>
+</html>
